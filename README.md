@@ -15,3 +15,8 @@ JWT
 -   단점
     -   Payload 정보가 많아지면 네트워크 사용량이 급증하게 된다. 설계 시 고려 필요
     -   서버에서 클라이언트의 토큰을 조작 할 수 없음(토큰이 클라이언트에 저장되기 떄문)
+
+---
+
+-   [강의 바로가기](https://www.inflearn.com/course/스프링부트-jwt/dashboard)
+-   5 Lectures, 43 Minutes
