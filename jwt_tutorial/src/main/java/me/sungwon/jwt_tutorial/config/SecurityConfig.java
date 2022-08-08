@@ -42,9 +42,9 @@ public class SecurityConfig{
     }
 
     @Bean
-    protected SecurityFilterChain configure(HttpSecurity http) throws Exception{
+    protected SecurityFilterChain httpConfigure(HttpSecurity http) throws Exception{
         return http
-                .csrf().disable()
+                .csrf().disable()// token 방식이기 때문
 
                 .exceptionHandling()
                 .authenticationEntryPoint(jwtAuthenticationEntryPoint)
@@ -54,13 +54,17 @@ public class SecurityConfig{
                 .headers()
                 .frameOptions()
                 .sameOrigin()
+
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // session 을 사용하지 않고 token 방식을 사용 할 것임
 
                 .and()
                 .authorizeRequests() // HttpServletRequest 를 사용하는 요청들에 대한 접근제한 설정
-                .antMatchers("/api/hello", "/api/authenticate", "/api/signup").permitAll() // token 이 없는 상태의 접근
+                .antMatchers("/api/hello").permitAll() // token 이 없는 상태의 접근
+                .antMatchers("/api/authenticate").permitAll()
+                .antMatchers("/api/signup").permitAll()
+
                 .anyRequest().authenticated()// antMatcher() 의 Argument 를 제외한 모든 uri 경로에 인증을 포함
 
                 .and()
@@ -70,7 +74,7 @@ public class SecurityConfig{
     }
 
     @Bean
-    protected WebSecurityCustomizer configure(){
-        return (web)->web.ignoring().antMatchers("/h2-console/**", "/favicon.ico");
+    public WebSecurityCustomizer webConfigure(){
+        return (web)->web.ignoring().antMatchers("/h2-console/**", "/favicon.ico", "/error");
     }
 }

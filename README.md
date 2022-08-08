@@ -18,5 +18,39 @@ JWT
 
 ---
 
--   [강의 바로가기](https://www.inflearn.com/course/스프링부트-jwt/dashboard)
--   5 Lectures, 43 Minutes
+### Chapter01
+
+-   프로젝트 생성, REST API 테스트
+
+### Chapter02
+
+-   401 unauthorized 해결을 위한 Security 설정 >> [sourceCode](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/jwt/JwtAuthenticationEntryPoint.java)
+-   Datasource, JPA 설정 >> [sourceCode](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/config/SecurityConfig.java)
+-   Entity 생성 >> [package](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/entity/)
+-   H2 Console 결과 확인
+    -   localhost:8080/h2-console/ => connect
+    -   SELECT \* FROM "USER"
+
+### Chapter03
+
+-   JWT 설정 추가
+-   JWT 관련 코드 개발 >> [jwt](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/jwt/)
+-   Security 설정 추가 >> [SecurityConfig](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/config/SecurityConfig.java)
+
+### Chapter04
+
+-   외부와의 통신에 사용할 DTO 클래스 생성 >> [dto](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/dto/)
+-   Repository 관련 코드 생성 >> [repository](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/repository/)
+-   로그인 API, 관련 로직 생성 >> [AuthController](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/controller/AuthController.java), [CustomUserDetailsService](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/service/CustomUserDetailsService.java)
+
+### Chapter05
+
+-   회원가입 API 생성 >> [UserService](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/service/UserService.java), [UserController](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/controller/UserController.java)
+-   권한검증 확인
+    -   GET : /api/user/{username}
+    -   Authorization : {{jwt_tutorial_token}}
+
+---
+
+5 Lectures, 43 Minutes  
+[강의 바로가기](https://www.inflearn.com/course/스프링부트-jwt/dashboard)
