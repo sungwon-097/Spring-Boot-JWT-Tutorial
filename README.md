@@ -3,7 +3,7 @@
 JWT
 
 -   RFC 7519 웹 표준
--   : JSON 객체를 사용해서 토근 자체에 정보들을 저장하고 있는 WEB TOKEN
+-   : JSON 객체를 사용해서 토큰 자체에 정보들을 저장하고 있는 WEB TOKEN
 -   구성 요소
     1.  Header : Signature를 hashing 하기 위한 Algorithm 정보
     2.  Payload : Server to Client, 시스템에서 실제로 사용될 정보의 내용
