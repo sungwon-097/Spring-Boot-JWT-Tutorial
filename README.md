@@ -50,6 +50,8 @@ JWT
     -   GET : /api/user/{username}
     -   Authorization : {{jwt_tutorial_token}}
 
+![image](/jwt_tutorial/packageStructure.png)
+
 ---
 
 5 Lectures, 43 Minutes  
