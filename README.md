@@ -24,9 +24,9 @@ JWT
 
 ### Chapter02
 
--   401 unauthorized 해결을 위한 Security 설정 >> [sourceCode](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/jwt/JwtAuthenticationEntryPoint.java)
--   Datasource, JPA 설정 >> [sourceCode](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/config/SecurityConfig.java)
--   Entity 생성 >> [package](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/entity/)
+-   401 unauthorized 해결을 위한 Security 설정 >> [JwtAuthenticationEntryPoint](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/jwt/JwtAuthenticationEntryPoint.java)
+-   Datasource, JPA 설정 >> [SecurityConfig](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/config/SecurityConfig.java)
+-   Entity 생성 >> [entity/](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/entity/)
 -   H2 Console 결과 확인
     -   localhost:8080/h2-console/ => connect
     -   SELECT \* FROM "USER"
@@ -34,13 +34,13 @@ JWT
 ### Chapter03
 
 -   JWT 설정 추가
--   JWT 관련 코드 개발 >> [jwt](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/jwt/)
+-   JWT 관련 코드 개발 >> [jwt/](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/jwt/)
 -   Security 설정 추가 >> [SecurityConfig](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/config/SecurityConfig.java)
 
 ### Chapter04
 
--   외부와의 통신에 사용할 DTO 클래스 생성 >> [dto](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/dto/)
--   Repository 관련 코드 생성 >> [repository](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/repository/)
+-   외부와의 통신에 사용할 DTO 클래스 생성 >> [dto/](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/dto/)
+-   Repository 관련 코드 생성 >> [repository/](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/repository/)
 -   로그인 API, 관련 로직 생성 >> [AuthController](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/controller/AuthController.java), [CustomUserDetailsService](/jwt_tutorial/src/main/java/me/sungwon/jwt_tutorial/service/CustomUserDetailsService.java)
 
 ### Chapter05
