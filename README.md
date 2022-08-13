@@ -15,7 +15,18 @@ JWT
 -   단점
     -   Payload 정보가 많아지면 네트워크 사용량이 급증하게 된다. 설계 시 고려 필요
     -   서버에서 클라이언트의 토큰을 조작 할 수 없음(토큰이 클라이언트에 저장되기 떄문)
+-   특징
+    1. 무삭제성  
+사용자의 인증 정보가 담겨있는 토큰을 클라이언트에 저장하기 때문에 서버에서 별도의 저장소가 필요 없어, 완전한 무상태(stateless)를 가질 수 있습니다. 그리고 이로인해 서버를 확장할 때 용이합니다.
 
+    2. 확장성  
+토큰 기반 인증을 사용하는 다른 시스템에 접근이 가능합니다. (ex. Facebook 로그인, Google 로그인)
+
+    3. 무결성  
+HMAC(Hash-based Message Authentication) 기법이라고도 불리며, 발급 후의 토큰의 정보를 변경하는 행위가 불가능합니다. 즉, 토큰이 변조되면 바로 알아차릴 수 있습니다.
+
+    4. 보안성  
+클라이언트가 서버에 요청을 보낼 때, 쿠키를 전달하지 않기 때문에 쿠키의 취약점은 사라지집니다.
 ---
 
 ### Chapter01
@@ -54,5 +65,4 @@ JWT
 
 ---
 
-5 Lectures, 43 Minutes  
-[강의 바로가기](https://www.inflearn.com/course/스프링부트-jwt/dashboard)
+5 Lectures, 43 Minutes [강의 바로가기](https://www.inflearn.com/course/스프링부트-jwt/dashboard)
